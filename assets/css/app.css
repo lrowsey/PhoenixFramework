@@ -3,3 +3,48 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+.timeline {
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .col, .action {
+    border-bottom: 1px solid #e1e8ed;
+  }
+  
+  .col:last-child, .action:last-child {
+    border-bottom: none;
+  }
+  
+  .col, .action {
+    padding: 12px;
+  }
+  
+  .link {
+    color: #1da1f2;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
