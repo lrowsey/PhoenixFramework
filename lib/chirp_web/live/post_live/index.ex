@@ -36,8 +36,8 @@ defmodule ChirpWeb.PostLive.Index do
   end
 
   @impl true
-  def handle_info({:post_created, post}, socket) do
-    {:noreply, update(socket, :posts, fn posts -> [post | posts] end)}
+ def handle_info({ChirpWeb.PostLive.FormComponent, {:saved, post}}, socket) do
+    {:noreply, stream_insert(socket, :posts, post)}
   end
 
   @impl true
