@@ -45,7 +45,21 @@ defmodule ChirpWeb.PostLive.Index do
     {:noreply, update(socket, :posts, fn posts -> [post | posts] end)}
   end
 
+   def handle_info({:post_created, post}, socket) do
+    {:noreply, assign(socket, :post, post)}
+  end
+
   
+def handle_event("like", _, socket) do
+    Chirp.Timeline.inc_likes(socket.assigns.post)
+  {:noreply, socket}
+end
+
+def handle_event("repost", _, socket) do
+  Chirp.Timeline.inc_repost(socket.assigns.post)
+  {:noreply, socket}
+end
+
 
   @impl true
   def handle_event("delete", %{"id" => id}, socket) do
