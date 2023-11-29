@@ -21,15 +21,7 @@ defmodule Chirp.Timeline do
     Repo.all(from p in Post, order_by: [desc: p.id])
   end
 
-def inc_likes(nil), do: {:error, "Post not found"}
-  def inc_likes(%Post{id: id} = post) when not is_nil(post) do
-    [updated_post] =
-      from(p in Post, where: p.id == ^id, select: p)
-      |> Repo.update_all(inc: [likes_count: 1])
-      |> elem(1)
 
-    broadcast({:ok, updated_post}, :post_updated)
-  end
 
   @doc """
   Gets a single post.
