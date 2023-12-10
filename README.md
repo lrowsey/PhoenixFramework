@@ -71,6 +71,8 @@ Key Takeaways
 
 While learning how to use and navigate the phoenix framework my biggest takeaway was the difference between learning older established software and new software. It was interesting to learn something that was very new ,it definitely had some cool features, but the lack of documentation was very challenging. Compared to something like java, c or html there were not a ton of resources to help learn. When I did find a good resource it was often outdated because it is still being developed and the changes are so large parts of the older versions are no longer relevant. Overall it was definitely an interesting experience and I think it gave me some good insight on learning new kinds of software. 
 
+Contributions
+I made a twitter clone on the pheonix framework. Kyler and I helped eachother initially because the proccess of setting up both of the webcites was fairly similiar. I then went and added a few new features like the edit and delete function we did most of the work in a call together offering help when needed. I also did half of the slideshow.
 
 Resources
 Phoenix Framework Official Website
